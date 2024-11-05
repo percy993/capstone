@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Alignment</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 100px);
+            gap: 10px;
+            height: 300px;
+            border: 2px solid #000;
+        }
+
+        .grid-item {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            display: flex;
+            align-items: center; /* Align items vertically */
+            justify-content: center; /* Align items horizontally */
+        }
+
+        .grid-container.align-items-center {
+            align-items: center; /* Align items vertically within the grid container */
+        }
+
+        .grid-container.justify-items-center {
+            justify-items: center; /* Align items horizontally within the grid container */
+        }
+
+        .grid-item.align-self-end {
+            align-self: end; /* Align this specific item vertically to the end */
+        }
+
+        .grid-item.justify-self-end {
+            justify-self: end; /* Align this specific item horizontally to the end */
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container align-items-center justify-items-center">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item align-self-end">3</div>
+        <div class="grid-item justify-self-end">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,314 @@
+/* atuy t sidebar  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+.img-user {
+    width: 50px;
+    border-radius: 100%;
+    border: 1px solid #eee;
+}
+
+.sidebar{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 80px;
+    background-color: #002147;
+    padding: .4rem .8rem;
+    transition: all 0.5s ease;
+    margin-top: 65px;
+    
+
+}
+
+.sidebar.active{
+    width: 250px;
+}
+
+.sidebar #btn{
+    position: absolute;
+    color: #fff;
+    top: .4rem;
+    left: 50%;
+    font-size: 1.2rem;
+    line-height: 50px;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+.sidebar.active #btn{
+    left: 90%;
+}
+
+.sidebar .top .logo{
+    color: #fff;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+}
+.sidebar.active .top .logo{
+    opacity: 1;
+}
+.top .logo i {
+    font-size: 2rem;
+    margin-right: 5px;
+}
+.admin{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+}
+.admin p{
+    color: #fff;
+    opacity: 1;
+    margin-left: 1rem;
+}
+.pp{
+    font-weight: 600;
+}
+.admin p{
+    opacity: 0;
+}
+.sidebar.active p{
+    opacity: 1;
+}
+.sidebar ul li{
+    position: relative;
+    list-style: none;
+    height: 50px;
+    width: 90%;
+    margin: 0.8rem auto;
+    line-height: 50px;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 0.8rem;
+}
+
+.sidebar ul li a:hover{
+    background-color: #fff;
+    color: #12171e;
+}
+
+.sidebar ul li a i{
+    min-width: 50px;
+    text-align: center;
+    height: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+}
+
+.sidebar .nav-item {
+    opacity: 0;
+}
+.sidebar.active .nav-item{
+    opacity: 1;
+}
+
+.sidebar ul li .tool-tip {
+    position: absolute;
+    left: 125px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.2);
+    border-radius: .6rem;
+    padding: .4rem 1.2rem;
+    line-height: 1.8rem;
+    z-index: 20;
+    opacity: 0;
+}
+.sidebar ul li:hover .tool-tip{
+    opacity: 1;
+}
+.sidebar.active ul li .tool-tip{
+    display: none;
+}
+.main-content{
+    position: relative;
+    background-color: #eee;
+    min-height: 100vh;
+    top: 0;
+    left: 80px;
+    transition: all 0.5s ease;
+    width: calc(100% - 80px);
+    padding: 1rem;
+}
+.sidebar.active ~ .main-content{
+    left: 250px;
+    width: calc(100%-250px);
+}
+
+/* atuy t header */
+.dashboard-header{
+    position: fixed; /* Change this to fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; /* Ensure it stays above the content */
+    color: #fff;
+    background-color: #002147;
+    font-size: 25px;
+}
+   
+   
+
+ .notification{
+    display: flex;
+    justify-content: center;
+ }
+ .bxs-bell{
+    font-size: 30px;
+    padding-top: 12px;    
+ }
+ .BDAMS{
+    padding-top: 12px;
+    text-align: left;
+ }
+ .bxs-user-circle{
+    font-size: 30px;
+    padding-top: 12px;
+    
+ }
+.logo-header{
+    width: 50px;
+    border-radius: 100%;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+.logout{ 
+    margin-top: 180px;
+}
+.grid-header{
+    display: grid;
+    grid-template-columns: 50px 950px 100px 100px ;
+    column-gap: 20px;
+}
+/* profile header */
+.profile-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #ffff;
+  }
+  .dropdown-content a {
+    color: #ffff;
+    padding: 7px 10px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #002147;
+    min-width: 50px;
+    z-index: 1;
+    font-size: 15px;
+  }
+  .dropdown-content a:hover {
+    background-color:#0070b8;
+  }
+  
+  /* Show the dropdown on hover */
+  .profile:hover .dropdown-content {
+    display: block;
+  }
+  .dropdown-content i {
+    margin-right: 10px;
+  }
+
+/* grid  */
+.select-events{
+    padding: 6px;
+}
+h2{
+    font-size: 20px;
+}
+.grid1{
+    max-width: 790px;
+    display: grid;
+    grid-template-columns: 300px 200px 200px;
+    background-color: burlywood;
+    column-gap: 15px;
+    padding: 10px;
+    align-items: right;
+    align-content: right;
+    margin-top: 80px;
+   
+}
+.select-events{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.two{
+    justify-self: end;
+}
+
+/* every container in the grid */
+
+        /* atuy t table */
+       
+        .table-container{
+            max-width: 790px;
+            padding: 20px;
+            
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #000039;
+            text-align: left;
+        }
+        
+        /* atuy t qr code button */
+        .button-qr {
+            margin-left: 120px;
+        }
+        /* main content */
+       
+        thead{
+            background-color: #87cefa;
+        }
+        
+        /* grid t table jy ngatu atuy */
+       .table-container {
+    overflow-y: auto; /* add scrollbar for vertical scrolling */
+    max-height: 500px; /* set a maximum height for the table container */
+    padding: 10px; /* add some padding for better visibility */
+    border: 1px solid #ddd; /* add a border for better visibility */
+}
+
+.table-container table {
+    width: 100%; /* make the table full width */
+    border-collapse: collapse; /* remove extra space between table cells */
+}
+
+.table-container thead {
+    background-color: #f0f0f0; /* add a light gray background for the header */
+}
+
+.table-container thead th {
+    padding: 10px; /* add some padding for better visibility */
+    border-bottom: 1px solid #ddd; /* add a border for better visibility */
+}
+
+.table-container tbody {
+    overflow-y: auto; /* add scrollbar for vertical scrolling */
+}
+
